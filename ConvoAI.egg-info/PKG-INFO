@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: ConvoAI
+Version: 0.1
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: sentence-transformers
+Requires-Dist: spacy
+Requires-Dist: colorama
