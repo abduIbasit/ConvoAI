@@ -4,7 +4,6 @@ import yaml
 import random
 import importlib
 from colorama import init, Fore
-# from actions import actions
 from sentence_transformers import SentenceTransformer, util
 from convoai_sdk.entity_extractor.entity_extractor import EntityExtractor
 
