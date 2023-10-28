@@ -1,4 +1,5 @@
 import os
+import sys
 import yaml
 import random
 import importlib
@@ -61,26 +62,52 @@ class ConvoAI:
             action_files = [f for f in os.listdir(self.actions_dir) if f.endswith('.py')]
         except OSError as e:
             return f"Error accessing actions directory. Details:\n {e}"
-
+        
+        # Add the actions directory to sys.path to allow module imports
+        sys.path.append(self.actions_dir)
+        
         for action_file in action_files:
+            module_name = action_file.rstrip('.py')  # Strip .py extension
+            # if module_name == "actions":
+            #     # Directly execute actions.py
+            #     with open(os.path.join(self.actions_dir, action_file), 'r') as file:
+            #         exec(file.read())
+            # else:
+            #     # Dynamically import other .py files
             try:
-                action_path = os.path.join(self.actions_dir, action_file)
-                spec = importlib.util.spec_from_file_location("module_name", action_path)
-                action_module = importlib.util.module_from_spec(spec)
-                spec.loader.exec_module(action_module)
+                action_module = importlib.import_module(module_name)
+                action_func = getattr(action_module, key_name, None)            
+                if action_func and callable(action_func):
+                    try:
+                        return action_func(user_question)
+                    except Exception as e:
+                        print(f"Error while executing {key_name}: \n{e}")
+                        return f"Could not complete the action {key_name}"
+                        
             except Exception as e:
-                return f"Error loading or executing {action_file}. \n{e}"
+                    print(f"Error loading or executing {action_file}. \n{e}")
+                    continue
+
+        return f"Action {key_name} not found in the actions directory."
+
+        
+        # for action_file in action_files:
+        #     try:
+        #         action_path = os.path.join(self.actions_dir, action_file)
+        #         spec = importlib.util.spec_from_file_location("module_name", action_path)
+        #         action_module = importlib.util.module_from_spec(spec)
+        #         spec.loader.exec_module(action_module)
+        #     except Exception as e:
+        #         return f"Error loading or executing {action_file}. \n{e}"
 
 
-            action_func = getattr(action_module, key_name, None)            
-            if action_func and callable(action_func):
-                try:
-                    return action_func()
-                except Exception as e:
-                    print(f"Error while executing {key_name}: \n{e}")
-                    return f"Could not complete the action {key_name}"
-
-        return f"Error performing {key_name}."
+        #     action_func = getattr(action_module, key_name, None)            
+        #     if action_func and callable(action_func):
+        #         try:
+        #             return action_func()
+        #         except Exception as e:
+        #             print(f"Error while executing {key_name}: \n{e}")
+        #             return f"Could not complete the action {key_name}"
 
 
     
