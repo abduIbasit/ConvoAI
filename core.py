@@ -4,6 +4,7 @@ import yaml
 import random
 import importlib
 from colorama import init, Fore
+# from actions import actions
 from sentence_transformers import SentenceTransformer, util
 from convoai_sdk.entity_extractor.entity_extractor import EntityExtractor
 
@@ -130,9 +131,9 @@ class ConvoAI:
                 response = self.get_response(user_question=user_input)
                 print(Fore.BLUE + response)
 
-            except KeyboardInterrupt:
-                # print("\nExiting chat. Goodbye!")
-                exit()
+            # except KeyboardInterrupt:
+            #     # print("\nExiting chat. Goodbye!")
+            #     exit()
 
             except Exception as e:
                 print(f"Oops! Something went wrong. Details: \n{e}")
