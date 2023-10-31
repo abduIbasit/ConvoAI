@@ -11,7 +11,7 @@ class EntityExtractor:
     def __init__(self, pattern_file="entities.yaml"):
         try:
             # Initialize NLP components
-            self.nlp = spacy.load("en_core_web_sm-3.7.1")
+            self.nlp = spacy.load("en_core_web_sm")
             self.matcher = Matcher(self.nlp.vocab)
         except Exception as e:
             raise EntityExtractorError(f"Error loading SpaCy model: {e}")
