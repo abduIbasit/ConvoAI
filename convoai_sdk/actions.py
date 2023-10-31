@@ -1,4 +1,4 @@
-from entity_extractor.entity_extractor import EntityExtractor
+from .entity_extractor import EntityExtractor
 from core import ConvoAI
 
 instance = ConvoAI()
