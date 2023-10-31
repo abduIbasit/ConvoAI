@@ -5,7 +5,7 @@ import random
 import importlib
 from colorama import init, Fore
 from sentence_transformers import SentenceTransformer, util
-from convoai_sdk.entity_extractor.entity_extractor import EntityExtractor
+from convoai_sdk.entity_extractor import EntityExtractor
 
 model = SentenceTransformer('paraphrase-distilroberta-base-v1')
 # Shukroh Mosunmola Ajike loves Abdulbasit Ayinla Olanrewaju
@@ -78,7 +78,7 @@ class ConvoAI:
                 action_func = getattr(action_module, key_name, None)            
                 if action_func and callable(action_func):
                     try:
-                        return action_func(user_question)
+                        return action_func()
                     except Exception as e:
                         print(f"Error while executing {key_name}: \n{e}")
                         return f"Could not complete the action {key_name}"
