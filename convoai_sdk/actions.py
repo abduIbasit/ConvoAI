@@ -1,5 +1,5 @@
 from .entity_extractor import EntityExtractor
-from core import ConvoAI
+from ..core import ConvoAI
 
 instance = ConvoAI()
 entity_extractor = EntityExtractor()
@@ -21,8 +21,12 @@ def get_entities(entity_label):
         if not entity_label or not isinstance(entity_label, str):
             raise ValueError("Entity label must be a non-empty string.")
         
+        print(instance.current_question)
+        if instance.current_question is None:
+            raise ValueError("User question could not be retrieved")
+        
         user_question = instance.current_question
-        entity = entity_extractor.get_entities(user_question, entity_label)
+        entity = entity_extractor.get_entities(text=user_question, label=entity_label)
         
         if entity:
             return entity
