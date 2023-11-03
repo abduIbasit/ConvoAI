@@ -1,3 +1,4 @@
+from typing import Text, Any, Dict
 import os
 import sys
 import yaml
@@ -25,12 +26,11 @@ class ConvoAI:
         self.prompts = [item["prompts"] for key, item in self.data.items()]
         self.question_embeddings = [model.encode(prompt, convert_to_tensor=True) for sublist in self.prompts for prompt in sublist]
         self.entity_extractor = EntityExtractor()
-        self.current_question = None
+        self.current_input = None
 
-    def get_response(self, user_question, threshold=0.4):
-        self.current_question = user_question
+    def get_response(self, user_input: Text, threshold=0.4):
         try:
-            user_embedding = model.encode(user_question, convert_to_tensor=True)
+            user_embedding = model.encode(user_input, convert_to_tensor=True)
         except Exception as e:
             return f"Error processing your input. Details: {e}"
         similarities = [util.pytorch_cos_sim(user_embedding, qe).item() for qe in self.question_embeddings]
@@ -41,7 +41,7 @@ class ConvoAI:
         key_name = self._get_key_name(similarities)
         
         if "ACTION" in self.data[key_name]["responses"]:
-            return self._perform_action(key_name, user_question)
+            return self._perform_action(key_name, user_input)
         else:
             return random.choice(self.data[key_name]["responses"])
         
@@ -80,12 +80,12 @@ class ConvoAI:
                     try:
                         return action_func()
                     except Exception as e:
-                        print(f"Error while executing {key_name}: \n{e}")
+                        print(f"Error while executing {key_name}. Details: \n{e}")
                         return f"Could not complete the action {key_name}"
                         
             except Exception as e:
-                    print(f"Error loading or executing {action_file}. \n{e}")
-                    continue
+                    print(f"Error loading or executing {action_file}. \nDetails: {e}")
+                    exit()
 
         return f"Action {key_name} not found in the actions directory."
 
@@ -115,6 +115,7 @@ class ConvoAI:
         while True:
             try:
                 user_input = input(Fore.MAGENTA + "Your Input ->" + Fore.YELLOW + " ")
+                self.current_input = user_input
 
                 if not user_input:
                     continue
@@ -127,8 +128,12 @@ class ConvoAI:
                     # print("ConvoAI: Goodbye!")
                     exit()
 
-                response = self.get_response(user_question=user_input)
-                print(Fore.BLUE + response)
+                response = self.get_response(user_input=user_input)
+                if not response:
+                    continue
+                
+                print (Fore.BLUE + response)
+                # return user_input
 
             # except KeyboardInterrupt:
             #     # print("\nExiting chat. Goodbye!")
