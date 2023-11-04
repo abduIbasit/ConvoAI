@@ -25,6 +25,9 @@ class ConvoAI:
             exit()
 
         self.actions_dir = os.path.join(os.getcwd(), 'actions')
+        core_directory = os.path.dirname(os.path.realpath(__file__))
+        conversation_directory = os.path.join(core_directory, "conversation")
+        self.conversation_dir = os.path.join(conversation_directory, "conversation.json")
         self.prompts = [item["prompts"] for key, item in self.data.items()]
         self.question_embeddings = [model.encode(prompt, convert_to_tensor=True) for sublist in self.prompts for prompt in sublist]
         self.entity_extractor = EntityExtractor()
@@ -152,7 +155,7 @@ class ConvoAI:
 
     def save_conversation(self):
         entry = {'time': time.ctime(), 'text': self.current_input, 'response':self.response}
-        with open("./conversation/conversation.json", "a") as file:
+        with open(self.conversation_dir, "a") as file:
             json.dump(entry, file)
             file.write('\n')
 
