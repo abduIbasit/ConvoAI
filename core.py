@@ -1,6 +1,8 @@
 from typing import Text, Any, Dict
 import os
 import sys
+import json
+import time
 import yaml
 import random
 import importlib
@@ -88,6 +90,9 @@ class ConvoAI:
                     exit()
 
         return f"Action {key_name} not found in the actions directory."
+    
+    def _form_loop(self, key_name):
+        pass
 
         
         # for action_file in action_files:
@@ -128,11 +133,13 @@ class ConvoAI:
                     # print("ConvoAI: Goodbye!")
                     exit()
 
-                response = self.get_response(user_input=user_input)
-                if not response:
+                self.response = self.get_response(user_input=user_input)
+                if not self.response:
                     continue
-                
-                print (Fore.BLUE + response)
+
+                self.save_conversation()
+
+                print (Fore.BLUE + self.response)
                 # return user_input
 
             # except KeyboardInterrupt:
@@ -141,6 +148,13 @@ class ConvoAI:
 
             except Exception as e:
                 print(f"Oops! Something went wrong. Details: \n{e}")
+
+
+    def save_conversation(self):
+        entry = {'time': time.ctime(), 'text': self.current_input, 'response':self.response}
+        with open("./conversation/conversation.json", "a") as file:
+            json.dump(entry, file)
+            file.write('\n')
 
 bot = ConvoAI()
 bot.main()
