@@ -32,8 +32,9 @@ class ConvoAI:
         self.question_embeddings = [model.encode(prompt, convert_to_tensor=True) for sublist in self.prompts for prompt in sublist]
         self.entity_extractor = EntityExtractor()
         self.current_input = None
+        self.response = None
 
-    def get_response(self, user_input: Text, threshold=0.4):
+    def get_response(self, user_input: Text, threshold=0.3):
         try:
             user_embedding = model.encode(user_input, convert_to_tensor=True)
         except Exception as e:
@@ -67,32 +68,34 @@ class ConvoAI:
         except OSError as e:
             return f"Error accessing actions directory. Details:\n {e}"
         
-        # Add the actions directory to sys.path to allow module imports
-        sys.path.append(self.actions_dir)
-        
-        for action_file in action_files:
-            module_name = action_file.rstrip('.py')  # Strip .py extension
-            # if module_name == "actions":
-            #     # Directly execute actions.py
-            #     with open(os.path.join(self.actions_dir, action_file), 'r') as file:
-            #         exec(file.read())
-            # else:
-            #     # Dynamically import other .py files
-            try:
-                action_module = importlib.import_module(module_name)
-                action_func = getattr(action_module, key_name, None)            
-                if action_func and callable(action_func):
-                    try:
-                        return action_func()
-                    except Exception as e:
-                        print(f"Error while executing {key_name}. Details: \n{e}")
-                        return f"Could not complete the action {key_name}"
-                        
-            except Exception as e:
-                    print(f"Error loading or executing {action_file}. \nDetails: {e}")
-                    exit()
-
-        return f"Action {key_name} not found in the actions directory."
+        try:
+            # Add the actions directory to sys.path to allow module imports
+            sys.path.append(self.actions_dir)
+            
+            for action_file in action_files:
+                module_name = action_file.rstrip('.py')  # Strip .py extension
+                # if module_name == "actions":
+                #     # Directly execute actions.py
+                #     with open(os.path.join(self.actions_dir, action_file), 'r') as file:
+                #         exec(file.read())
+                # else:
+                #     # Dynamically import other .py files
+                try:
+                    action_module = importlib.import_module(module_name)
+                    action_func = getattr(action_module, key_name, None)            
+                    if action_func and callable(action_func):
+                        try:
+                            return action_func()
+                        except Exception as e:
+                            print(f"Error while executing {key_name}. Details: \n{e}")
+                            return f"Could not complete the action {key_name}"
+                            
+                except Exception as e:
+                        print(f"Error loading or executing {action_file}. \nDetails: {e}")
+                        exit()
+        except:
+            print(f"Action {key_name} not found in the actions directory.")
+            exit()
     
     def _form_loop(self, key_name):
         pass
@@ -116,31 +119,35 @@ class ConvoAI:
         #             print(f"Error while executing {key_name}: \n{e}")
         #             return f"Could not complete the action {key_name}"
 
+    def retrieve_input(self):
+        user_input = input(Fore.MAGENTA + "Your Input ->" + Fore.YELLOW + " ")
+        self.current_input = user_input
+        self.save_conversation()
+        return (self.current_input)
 
     
     def main(self):
         init(autoreset=True)
         while True:
             try:
-                user_input = input(Fore.MAGENTA + "Your Input ->" + Fore.YELLOW + " ")
-                self.current_input = user_input
+                users_input = self.retrieve_input()
 
-                if not user_input:
+                if not users_input:
                     continue
                 
-                if user_input == '/help':
+                if users_input == '/help':
                     print("Available commands: \n - /quit or q: Exit the chat\n - /help: View commands")
                     continue
                 
-                if user_input in ['/quit']:
+                if users_input in ['/quit']:
                     # print("ConvoAI: Goodbye!")
                     exit()
 
-                self.response = self.get_response(user_input=user_input)
+                self.response = self.get_response(user_input=users_input)
                 if not self.response:
                     continue
 
-                self.save_conversation()
+                # self.save_conversation()
 
                 print (Fore.BLUE + self.response)
                 # return user_input
@@ -151,6 +158,14 @@ class ConvoAI:
 
             except Exception as e:
                 print(f"Oops! Something went wrong. Details: \n{e}")
+                exit()
+
+
+    def save_conversation(self):
+        entry = {'time': time.ctime(), 'text': self.current_input, 'response':self.response}
+        with open(self.conversation_dir, "a") as file:
+            json.dump(entry, file)
+            file.write('\n')
 
 
     def save_conversation(self):
