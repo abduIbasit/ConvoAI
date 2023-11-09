@@ -27,7 +27,8 @@ class ConvoAI:
         self.actions_dir = os.path.join(os.getcwd(), 'actions')
         core_directory = os.path.dirname(os.path.realpath(__file__))
         conversation_directory = os.path.join(core_directory, "conversation")
-        self.conversation_dir = os.path.join(conversation_directory, "conversation.json")
+        self.conversation_history = os.path.join(conversation_directory, "conversation.json")
+        self.prompts_history = os.path.join(conversation_directory, "prompts.txt")
         self.prompts = [item["prompts"] for key, item in self.data.items()]
         self.question_embeddings = [model.encode(prompt, convert_to_tensor=True) for sublist in self.prompts for prompt in sublist]
         self.entity_extractor = EntityExtractor()
@@ -49,7 +50,8 @@ class ConvoAI:
         if "ACTION" in self.data[key_name]["responses"]:
             return self._perform_action(key_name, user_input)
         else:
-            return random.choice(self.data[key_name]["responses"])
+            text = random.choice(self.data[key_name]["responses"])
+            return f'{text}'
         
     def _get_key_name(self, similarities):
         closest_idx = similarities.index(max(similarities))
@@ -100,29 +102,12 @@ class ConvoAI:
     def _form_loop(self, key_name):
         pass
 
-        
-        # for action_file in action_files:
-        #     try:
-        #         action_path = os.path.join(self.actions_dir, action_file)
-        #         spec = importlib.util.spec_from_file_location("module_name", action_path)
-        #         action_module = importlib.util.module_from_spec(spec)
-        #         spec.loader.exec_module(action_module)
-        #     except Exception as e:
-        #         return f"Error loading or executing {action_file}. \n{e}"
 
-
-        #     action_func = getattr(action_module, key_name, None)            
-        #     if action_func and callable(action_func):
-        #         try:
-        #             return action_func()
-        #         except Exception as e:
-        #             print(f"Error while executing {key_name}: \n{e}")
-        #             return f"Could not complete the action {key_name}"
 
     def retrieve_input(self):
         user_input = input(Fore.MAGENTA + "Your Input ->" + Fore.YELLOW + " ")
         self.current_input = user_input
-        self.save_conversation()
+        self.save_prompts()
         return (self.current_input)
 
     
@@ -147,7 +132,7 @@ class ConvoAI:
                 if not self.response:
                     continue
 
-                # self.save_conversation()
+                self.save_conversation()
 
                 print (Fore.BLUE + self.response)
                 # return user_input
@@ -161,16 +146,15 @@ class ConvoAI:
                 exit()
 
 
-    def save_conversation(self):
-        entry = {'time': time.ctime(), 'text': self.current_input, 'response':self.response}
-        with open(self.conversation_dir, "a") as file:
-            json.dump(entry, file)
+    def save_prompts(self):
+        # entry = {'time': time.ctime(), 'text': self.current_input, 'response':self.response}
+        with open(self.prompts_history, "a") as file:
+            file.write(self.current_input)
             file.write('\n')
 
-
     def save_conversation(self):
         entry = {'time': time.ctime(), 'text': self.current_input, 'response':self.response}
-        with open(self.conversation_dir, "a") as file:
+        with open(self.conversation_history, "a") as file:
             json.dump(entry, file)
             file.write('\n')
 
