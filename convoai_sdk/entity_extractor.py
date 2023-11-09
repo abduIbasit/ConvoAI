@@ -56,7 +56,28 @@ class EntityExtractor:
     def get_entities(self, text, entity_label):
         try:
             all_entities = self.extract_entities(text)
-            return [ent.text for ent in all_entities if ent.label_ == entity_label]
+            # return [ent.text for ent in all_entities if ent.label_ == entity_label]
+            entities = (ent.text for ent in all_entities if ent.label_ == entity_label)
+            return entities
         
         except Exception as e:
             raise ValueError(f"Error retrieving entities of type {entity_label}: {e}")
+        
+
+# answer = EntityExtractor().get_entities('I am traveling to Alabama to eat spaghetti', 'GPE')
+
+# def test():
+#     if answer:
+#         return(answer)
+#     else:
+#         list = [None]
+#         li = (l for l in list)
+#         return(li)
+
+# def order():
+#     use = next(test())
+#     print(use)
+
+# order()  
+# print(next(answer))
+# print(next(answer))
