@@ -64,7 +64,7 @@ class EntityExtractor:
             raise ValueError(f"Error retrieving entities of type {entity_label}: {e}")
         
 
-# answer = EntityExtractor().get_entities('I am traveling to Alabama to eat spaghetti', 'GPE')
+# answer = EntityExtractor().get_entities('I am traveling to eat spaghetti', 'GPE')
 
 # def test():
 #     if answer:
@@ -78,6 +78,6 @@ class EntityExtractor:
 #     use = next(test())
 #     print(use)
 
-# order()  
+# test()
 # print(next(answer))
 # print(next(answer))
