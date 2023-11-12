@@ -8,7 +8,7 @@ prompts_directory = os.path.join(os.path.dirname(script_directory), "conversatio
 
 import yaml
 from typing import Text, List, Dict, Tuple, Any, Generator
-from entity_extractor import EntityExtractor
+from .entity_extractor import EntityExtractor
 # from entity_extractor import EntityExtractor
 
 
@@ -26,25 +26,31 @@ def load_prompts():
 
 
 # Check if slots.yaml is directly in the working directory
-slots_config_file = os.path.join(os.path.dirname(os.path.realpath(__file__)), "slots.yaml")
-
-# Check if slots.yaml is in the slots subdirectory
-slots_subdir = os.path.join(os.path.dirname(os.path.realpath(__file__)), "slots")
-if not os.path.exists(slots_config_file):
-    pass
-
-# os.path.exists(slots_subdir):
-# Load all YAML files in the slots subdirectory
-slot_files = [f for f in os.listdir(os.path.exists(slots_subdir)) if f.endswith('.yaml') or f.endswith('.yml')]
+slots_config_file = os.path.join(os.getcwd(), "slots.yaml")
 slots_configurations = {}
-for slot_file in slot_files:
-    slot_file_path = os.path.join(slots_subdir, slot_file)
+
+
+if os.path.exists(slots_config_file):
     try:
-        with open(slot_file_path, "r") as config_file:
+        with open(slots_config_file, "r") as config_file:
             slot_config = yaml.safe_load(config_file)
             slots_configurations.update(slot_config)
     except Exception as e:
-        print(f"Error loading {slot_file}. Details: {e}")
+        print(f"Error loading {slots_config_file}. Details: {e}")
+    
+# Check if slots.yaml is in the slots subdirectory
+slots_subdir = os.path.join(os.getcwd(), "slots")
+if os.path.exists(slots_subdir):
+    # Load all YAML files in the slots subdirectory
+    slot_files = [f for f in os.listdir(slots_subdir) if f.endswith('.yaml') or f.endswith('.yml')]
+    for slot_file in slot_files:
+        slot_file_path = os.path.join(slots_subdir, slot_file)
+        try:
+            with open(slot_file_path, "r") as config_file:
+                slot_config = yaml.safe_load(config_file)
+                slots_configurations.update(slot_config)
+        except Exception as e:
+            print(f"Error loading {slot_file}. Details: {e}")
 
 # Initialize slots dictionary
 slots = {
@@ -117,7 +123,7 @@ class Tracker:
         Parameters:
         slot_name (Text): The name of the slot to be retrieved.
 
-        Returns: Value of secified slot if present, None, if not present
+        Returns: Value of specified slot if present, None, if not present
         '''
         try:
             if slot_name not in slots_configurations:
@@ -161,5 +167,3 @@ class Tracker:
             
         except Exception as e:
             raise ValueError(f"Error retrieving slot value: {e}")
-        
-print(slots_configurations)
