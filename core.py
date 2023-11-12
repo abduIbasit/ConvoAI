@@ -1,6 +1,7 @@
 from typing import Text, Any, Dict
 import os
 import sys
+import traceback
 import json
 import time
 import yaml
@@ -48,10 +49,10 @@ class ConvoAI:
         key_name = self._get_key_name(similarities)
         
         if "ACTION" in self.data[key_name]["responses"]:
-            return self._perform_action(key_name, user_input)
+            return self._perform_action(key_name)
         else:
             text = random.choice(self.data[key_name]["responses"])
-            return f'{text}'
+            return text
         
     def _get_key_name(self, similarities):
         closest_idx = similarities.index(max(similarities))
@@ -63,7 +64,7 @@ class ConvoAI:
                 return key
         return None
 
-    def _perform_action(self, key_name, user_question):
+    def _perform_action(self, key_name):
         # Get all the .py files in the actions directory
         try:
             action_files = [f for f in os.listdir(self.actions_dir) if f.endswith('.py')]
@@ -76,27 +77,25 @@ class ConvoAI:
             
             for action_file in action_files:
                 module_name = action_file.rstrip('.py')  # Strip .py extension
-                # if module_name == "actions":
-                #     # Directly execute actions.py
-                #     with open(os.path.join(self.actions_dir, action_file), 'r') as file:
-                #         exec(file.read())
-                # else:
-                #     # Dynamically import other .py files
                 try:
                     action_module = importlib.import_module(module_name)
                     action_func = getattr(action_module, key_name, None)            
+                    
                     if action_func and callable(action_func):
                         try:
                             return action_func()
                         except Exception as e:
-                            print(f"Error while executing {key_name}. Details: \n{e}")
+                            print(Fore.WHITE + f"Error while executing {key_name}. Details:")
+                            traceback.print_exc()
                             return f"Could not complete the action {key_name}"
                             
                 except Exception as e:
-                        print(f"Error loading or executing {action_file}. \nDetails: {e}")
+                        print(Fore.WHITE + f"Error loading or executing {action_file}. Details:")
+                        traceback.print_exc()
                         exit()
         except:
-            print(f"Action {key_name} not found in the actions directory.")
+            print(Fore.WHITE + f"An unexpected error occured. Details:")
+            traceback.print_exc()
             exit()
     
     def _form_loop(self, key_name):
@@ -134,7 +133,7 @@ class ConvoAI:
 
                 self.save_conversation()
 
-                print (Fore.BLUE + self.response)
+                print (Fore.BLUE + f'{self.response}')
                 # return user_input
 
             # except KeyboardInterrupt:
