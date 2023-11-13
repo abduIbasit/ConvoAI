@@ -30,9 +30,9 @@ ConvoAI is an open-source conversational chatbot framework designed to simplify 
 6. Execute actions seamlessly with the integrated action execution engine.
 
 ## Installation
-'''
- pip install convoai 
-'''
+```
+ pip install convoai
+```
 
 ## Getting Started
 Refer to the documentation and example files for detailed usage instructions and best practices.
