@@ -41,3 +41,4 @@ Contributions are welcome! Check out the Contribution Guidelines for details.
 
 ## License
 This project is licensed under the MIT License.
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
