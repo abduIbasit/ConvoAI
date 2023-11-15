@@ -30,7 +30,7 @@ class EntityExtractor:
 
         for label, words in patterns.items():
             for word in words:
-                pattern = [{"LOWER": word}]
+                pattern = [{"LOWER": word.lower()}]
                 self.matcher.add(label, [pattern])
 
     def extract_entities(self, text):
@@ -63,7 +63,6 @@ class EntityExtractor:
         except Exception as e:
             raise ValueError(f"Error retrieving entities of type {entity_label}: {e}")
         
-
 # answer = EntityExtractor().get_entities('I am traveling to eat spaghetti', 'GPE')
 
 # def test():
