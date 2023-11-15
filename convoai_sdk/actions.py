@@ -127,7 +127,7 @@ class Tracker:
         '''
         try:
             if slot_name not in slots_configurations:
-                raise ValueError(f"Slot {slot_name} is not defined in slots.yaml.")
+                raise ValueError(f"Slot '{slot_name} is not defined in slots.yaml.")
             
             slot_type = slots_configurations[slot_name]["type"]
             
