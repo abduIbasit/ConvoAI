@@ -1,0 +1,180 @@
+hey
+i want to order rice
+i want to order eba
+/usr/local/bin/python3 /Users/abdulbasitayinla/Downloads/ConvoAI/convoai_sdk/entity_extractor.py
+/quit
+hey
+what is your favorite meal
+tell me a joke
+i want to order rice
+i want to order eba
+/quit
+hello
+/stop
+/quit
+hello
+what are you?
+okay
+what can you do?
+hi
+/quit
+hello
+where is this?
+hmm ok
+what are you capable of tho?
+i want to shop some new outfit
+suit
+bespoke
+by next month
+that's correct
+do you have a girlfriend?
+what????
+do you drink tho?
+okay
+tell em a joke
+how many wives do you have?
+i really like you
+kampala
+Kampala
+i want it tomorrow
+yes
+/quit
+hi
+/quit
+hello
+/quit
+hello
+/quit
+hello
+bye
+what are you?
+/quit
+hello
+what are you?
+what are you capable of?
+i wanna order some bespoke wears
+i dont know yet
+i want it on 23-12-2023
+no
+correct
+thank you
+where are you from?
+ok
+do you have a best friend?
+lol
+hahaha
+tell me a joke
+lmaooo
+suit
+i want to order a suit
+i want to order a Suit
+i want to order kampala
+i want to order Sweatpant
+Bespoke
+maybe 
+maybe next time
+/quit
+hi
+what are you?
+wow
+what would you like to do?
+i wish to get some clothes
+kampala
+hey dear
+i wanna get some outfit
+kampala
+in two weeks
+confirm
+yes
+Sweatpant
+maybe next time
+/quit
+hey
+how are you?
+i want to order new outifts
+Bespoke wears ofcourse
+maybe next time
+in two days time
+that's fine
+no
+/quit
+hey
+i wanna order Kamala wears
+Kampala
+i want it by 20/10/2024
+i wanna order a Bespoke and suit
+tomorrow
+i want the delivery tomorrow
+i want the delivery the day after tomorrow
+thank you
+i want new outfits
+bye
+do you have a girlfriend?
+what did you eat this morning?
+i want a suit and kampala
+23-12-2023
+i want it by 23-12-2023
+i want it on the 23-12-2023
+i want it next month
+/quit
+i want a Suit and Kampala
+i want it next year
+yep
+/quit
+hi
+who am i chatting with?
+okay
+what are you?
+i wanna get some new clothes
+i would like Bespoke wears
+hi
+i wanna get some new outfits
+i want proper Bespoke wears
+/quit
+i want to buy suit
+tell me a joke
+/quit
+i wanna order a proper Bespoke wears
+/quit
+i wanna order a proper bespoke wear
+i wanna order a proper Bespoke wear
+/usr/local/bin/python3 /Users/abdulbasitayinla/Downloads/ConvoAI/convoai_sdk/actions.py
+/quit
+hey
+how can you help me?
+okay
+i wanna order Bespoke and Kampala
+i wanna order Bespoke
+next week
+yes
+/quit
+hi
+i wanna get a Kampala
+next week
+my location is Agege
+tell me a joke
+/stop
+/quit
+i would like to order new Bespoke outfit
+Bespoke
+23rd of october
+23-12-2023
+i want it on 23-12-2023
+my location is Agege
+my location is Lekki
+tell me a joke
+/quit
+hello
+i want to order Bespoke wear
+i want it on 23-12-2023
+my location is Agege
+/usr/local/bin/python3 /Users/abdulbasitayinla/Downloads/ConvoAI/convoai_sdk/entity_extractor.py
+/quit
+hello
+i wanna order Bespoke wears
+i want it tomorrrow
+i want it delivered tomorrow
+my location is agege
+my location is ikeja
+my location is Dopemu
+/quit

@@ -1,0 +1,173 @@
+{"time": "Thu Nov  9 16:08:22 2023", "text": "hey", "response": "Hi! How can i help you??"}
+{"time": "Thu Nov  9 16:08:32 2023", "text": "tell me a joke", "response": "No one truly knows who's Chuck Norris' real father. No one is biologically strong enough for this. He must've conceived himself."}
+{"time": "Thu Nov  9 16:08:43 2023", "text": "i want to order rice", "response": "I love rice"}
+{"time": "Thu Nov  9 16:08:54 2023", "text": "i want to order beans", "response": "I love beans"}
+{"time": "Thu Nov  9 16:25:28 2023", "text": "hey", "response": "Hi! How can i help you??"}
+{"time": "Thu Nov  9 16:25:36 2023", "text": "i want to order rice", "response": "I love rice"}
+{"time": "Thu Nov  9 16:25:57 2023", "text": "i want to order moi-moi", "response": "Could not complete the action food_order"}
+{"time": "Thu Nov  9 16:27:32 2023", "text": "i want to order semo", "response": "I love semo"}
+{"time": "Thu Nov  9 16:29:01 2023", "text": "hey", "response": "Hi! How can i help you??"}
+{"time": "Thu Nov  9 16:29:11 2023", "text": "i want to order spaghetti", "response": "I love spaghetti"}
+{"time": "Thu Nov  9 16:29:18 2023", "text": "i want to order water", "response": "Could not complete the action food_order"}
+{"time": "Thu Nov  9 16:29:38 2023", "text": "i want to order amala", "response": "Could not complete the action food_order"}
+{"time": "Thu Nov  9 16:34:10 2023", "text": "hello", "response": "Hi! How can i help you??"}
+{"time": "Thu Nov  9 16:34:47 2023", "text": "tell me a joke", "response": "Could not complete the action joke_request"}
+{"time": "Thu Nov  9 16:35:03 2023", "text": "tell me a joke", "response": "Could not complete the action joke_request"}
+{"time": "Thu Nov  9 16:35:23 2023", "text": "hahaha", "response": "I am that impressive"}
+{"time": "Thu Nov  9 16:35:29 2023", "text": "tell me a joke", "response": "Could not complete the action joke_request"}
+{"time": "Thu Nov  9 16:35:35 2023", "text": "i want to order rice", "response": "Could not complete the action food_order"}
+{"time": "Thu Nov  9 16:47:31 2023", "text": "hey", "response": "Hi! How can i help you??"}
+{"time": "Thu Nov  9 16:54:03 2023", "text": "/quit", "response": "Could not complete the action food_order"}
+{"time": "Thu Nov  9 17:04:33 2023", "text": "hey", "response": "Hi! How can i help you??"}
+{"time": "Thu Nov  9 17:05:26 2023", "text": "i want to order rice", "response": "I love rice"}
+{"time": "Thu Nov  9 17:06:31 2023", "text": "i want to order eba", "response": "Could not complete the action food_order"}
+{"time": "Thu Nov  9 17:08:23 2023", "text": "/usr/local/bin/python3 /Users/abdulbasitayinla/Downloads/ConvoAI/convoai_sdk/entity_extractor.py", "response": "I'm sorry, I do not understand."}
+{"time": "Thu Nov  9 17:45:29 2023", "text": "hey", "response": "Hi! How can i help you??"}
+{"time": "Thu Nov  9 17:45:42 2023", "text": "what is your favorite meal", "response": "my favorite food is cake"}
+{"time": "Thu Nov  9 17:46:16 2023", "text": "tell me a joke", "response": "Gorillas engage in fights only after making sure Chuck Norris is not watching them stealthly."}
+{"time": "Thu Nov  9 17:47:15 2023", "text": "i want to order rice", "response": "I love rice"}
+{"time": "Thu Nov  9 17:47:20 2023", "text": "i want to order eba", "response": "Could not complete the action food_order"}
+{"time": "Thu Nov  9 18:52:41 2023", "text": "hello", "response": "Hello! \\nWelcome to Beyotti Fashion Hub"}
+{"time": "Thu Nov  9 18:54:10 2023", "text": "/stop", "response": "Bye!"}
+{"time": "Thu Nov  9 18:55:14 2023", "text": "hello", "response": "Hello! \\nWelcome to Beyotti Fashion Hub"}
+{"time": "Thu Nov  9 18:56:14 2023", "text": "what are you?", "response": "Yes, I am a bot by Beyotti"}
+{"time": "Thu Nov  9 18:56:32 2023", "text": "okay", "response": "That's right!"}
+{"time": "Thu Nov  9 22:24:27 2023", "text": "hi", "response": "Hello! \\nWelcome to Beyotti Fashion Hub"}
+{"time": "Thu Nov  9 22:27:15 2023", "text": "hello", "response": "Hello! \\nWelcome to Beyotti Fashion Hub"}
+{"time": "Thu Nov  9 22:27:23 2023", "text": "where is this?", "response": "I am a virtual assistant representing Beyotti"}
+{"time": "Thu Nov  9 22:27:30 2023", "text": "hmm ok", "response": "Yeah"}
+{"time": "Thu Nov  9 22:27:49 2023", "text": "what are you capable of tho?", "response": "I am here to help you with your digital shopping on Beyotti"}
+{"time": "Thu Nov  9 22:28:16 2023", "text": "i want to shop some new outfit", "response": "What kind of outfits would you like to order?"}
+{"time": "Thu Nov  9 22:28:34 2023", "text": "suit", "response": "That's right!"}
+{"time": "Thu Nov  9 22:28:45 2023", "text": "bespoke", "response": "Please specify the expected delivery date"}
+{"time": "Thu Nov  9 22:30:32 2023", "text": "by next month", "response": "Please confirm your order detail:\nOutfit - bespoke\nDelivery Date - next month"}
+{"time": "Thu Nov  9 22:31:35 2023", "text": "that's correct", "response": "Your order has been received"}
+{"time": "Thu Nov  9 22:32:38 2023", "text": "do you have a girlfriend?", "response": "Please refrain from asking unreasonable questions. Thank you!"}
+{"time": "Thu Nov  9 22:32:52 2023", "text": "what????", "response": "Yeah"}
+{"time": "Thu Nov  9 22:33:12 2023", "text": "do you drink tho?", "response": "I am a virtual assistant, I do not have the ability to live like human beings"}
+{"time": "Thu Nov  9 22:33:16 2023", "text": "okay", "response": "That's right!"}
+{"time": "Thu Nov  9 22:33:54 2023", "text": "tell em a joke", "response": "Could not complete the action joke_request"}
+{"time": "Thu Nov  9 23:01:31 2023", "text": "how many wives do you have?", "response": "I am a virtual assistant, I do not have the ability to live like human beings"}
+{"time": "Thu Nov  9 23:01:52 2023", "text": "i really like you", "response": "Could not complete the action specify_delivery_date"}
+{"time": "Fri Nov 10 15:38:47 2023", "text": "kampala", "response": "Could not complete the action specify_outfit_order"}
+{"time": "Fri Nov 10 15:39:22 2023", "text": "Kampala", "response": "Could not complete the action specify_outfit_order"}
+{"time": "Fri Nov 10 15:39:41 2023", "text": "i want it tomorrow", "response": "Could not complete the action specify_delivery_date"}
+{"time": "Fri Nov 10 15:39:52 2023", "text": "yes", "response": "Your order has been received"}
+{"time": "Sat Nov 11 12:08:23 2023", "text": "hi", "response": "F"}
+{"time": "Sat Nov 11 12:15:07 2023", "text": "hello", "response": "Hello.\nWelcome to Beyotti Fashion Hub"}
+{"time": "Sat Nov 11 12:16:22 2023", "text": "hello", "response": ["Hello.\nWelcome to Beyotti Fashion Hub"]}
+{"time": "Sat Nov 11 12:16:52 2023", "text": "hello", "response": "Hello.\nWelcome to Beyotti Fashion Hub"}
+{"time": "Sat Nov 11 12:16:58 2023", "text": "bye", "response": "Bye!"}
+{"time": "Sat Nov 11 12:17:03 2023", "text": "what are you?", "response": "I am a virtual assistant representing Beyotti"}
+{"time": "Sat Nov 11 12:18:17 2023", "text": "hello", "response": "Hello.\nWelcome to Beyotti Fashion Hub"}
+{"time": "Sat Nov 11 12:18:27 2023", "text": "what are you?", "response": "I am a bot by Beyotti"}
+{"time": "Sat Nov 11 12:18:49 2023", "text": "what are you capable of?", "response": "I am here to help you with your digital shopping processes on Beyotti"}
+{"time": "Sat Nov 11 12:19:00 2023", "text": "i wanna order some bespoke wears", "response": "Please specify the expected delivery date"}
+{"time": "Sat Nov 11 12:19:23 2023", "text": "i dont know yet", "response": "I am here to help you with your digital shopping processes on Beyotti"}
+{"time": "Sat Nov 11 12:19:32 2023", "text": "i want it on 23-12-2023", "response": "Please confirm your order detail:\nOutfit - bespoke\nDelivery Date - 23-12-2023"}
+{"time": "Sat Nov 11 12:19:41 2023", "text": "no", "response": "Yeah"}
+{"time": "Sat Nov 11 12:19:44 2023", "text": "correct", "response": "Your order has been received. Thank you for choosing Beyotti.\nWould you like to do anything else?"}
+{"time": "Sat Nov 11 12:21:54 2023", "text": "thank you", "response": "Bye!"}
+{"time": "Sat Nov 11 12:28:57 2023", "text": "where are you from?", "response": "I am a virtual assistant, I do not have the ability to live like human beings"}
+{"time": "Sat Nov 11 12:29:00 2023", "text": "ok", "response": "That's right!"}
+{"time": "Sat Nov 11 12:29:12 2023", "text": "do you have a best friend?", "response": "Please refrain from asking unreasonable questions. Thank you!"}
+{"time": "Sat Nov 11 12:29:19 2023", "text": "lol", "response": "Yeah"}
+{"time": "Sat Nov 11 12:29:21 2023", "text": "hahaha", "response": "Yeah"}
+{"time": "Sat Nov 11 12:29:25 2023", "text": "tell me a joke", "response": "Chuck Norris is never 'armed to the teeth'. He is armed WITH teeth."}
+{"time": "Sat Nov 11 12:29:30 2023", "text": "lmaooo", "response": "Yeah"}
+{"time": "Sat Nov 11 12:30:31 2023", "text": "suit", "response": "That's right!"}
+{"time": "Sat Nov 11 12:30:39 2023", "text": "i want to order a suit", "response": "Please specify the expected delivery date"}
+{"time": "Sat Nov 11 12:30:50 2023", "text": "i want to order a Suit", "response": "Please specify the expected delivery date"}
+{"time": "Sat Nov 11 12:31:11 2023", "text": "i want to order kampala", "response": "Could not complete the action specify_outfit_order"}
+{"time": "Sat Nov 11 12:31:34 2023", "text": "i want to order Sweatpant", "response": "Please specify the expected delivery date"}
+{"time": "Sat Nov 11 12:31:45 2023", "text": "Bespoke", "response": "Please specify the expected delivery date"}
+{"time": "Sat Nov 11 12:31:58 2023", "text": "maybe ", "response": "Yeah"}
+{"time": "Sat Nov 11 12:32:05 2023", "text": "maybe next time", "response": "Could not complete the action specify_delivery_date"}
+{"time": "Sat Nov 11 12:46:08 2023", "text": "hi", "response": "Hello.\nWelcome to Beyotti Fashion Hub"}
+{"time": "Sat Nov 11 12:46:20 2023", "text": "what are you?", "response": "I am a bot by Beyotti"}
+{"time": "Sat Nov 11 12:46:22 2023", "text": "wow", "response": "That's right!"}
+{"time": "Sat Nov 11 12:47:15 2023", "text": "what would you like to do?", "response": "I am here to help you with your digital shopping processes on Beyotti"}
+{"time": "Sat Nov 11 12:47:30 2023", "text": "i wish to get some clothes", "response": "What kind of outfits would you like to order?\nThank you for choosing Beyotti"}
+{"time": "Sat Nov 11 12:49:26 2023", "text": "hey dear", "response": "Hello.\nWelcome to Beyotti Fashion Hub"}
+{"time": "Sat Nov 11 12:49:33 2023", "text": "i wanna get some outfit", "response": "What kind of outfits would you like to order?\nThank you for choosing Beyotti"}
+{"time": "Sat Nov 11 12:49:38 2023", "text": "kampala", "response": "Please specify the expected delivery date"}
+{"time": "Sat Nov 11 12:49:49 2023", "text": "in two weeks", "response": "Please confirm your order detail:\nOutfit - kampala\nDelivery Date - two weeks"}
+{"time": "Sat Nov 11 12:50:32 2023", "text": "confirm", "response": "Your order has been received. Thank you for choosing Beyotti.\nWould you like to do anything else?"}
+{"time": "Sat Nov 11 12:50:36 2023", "text": "yes", "response": "Your order has been received. Thank you for choosing Beyotti.\nWould you like to do anything else?"}
+{"time": "Sat Nov 11 12:50:43 2023", "text": "Sweatpant", "response": "Please specify the expected delivery date"}
+{"time": "Sat Nov 11 12:50:54 2023", "text": "maybe next time", "response": "Could not complete the action specify_delivery_date"}
+{"time": "Sat Nov 11 17:04:00 2023", "text": "hey", "response": "Hello.\nWelcome to Beyotti Fashion Hub"}
+{"time": "Sat Nov 11 17:04:05 2023", "text": "how are you?", "response": "I am a virtual assistant representing Beyotti"}
+{"time": "Sat Nov 11 17:04:17 2023", "text": "i want to order new outifts", "response": "What kind of outfits would you like to order?\n\nThank you for choosing Beyotti"}
+{"time": "Sat Nov 11 17:05:01 2023", "text": "Bespoke wears ofcourse", "response": "Please specify the expected delivery date"}
+{"time": "Sat Nov 11 17:05:07 2023", "text": "maybe next time", "response": "Please specify your delivery date in the format 'DD-MM-YYYY'"}
+{"time": "Sat Nov 11 17:05:33 2023", "text": "in two days time", "response": "Please confirm your order detail:\nOutfit - Bespoke\nDelivery Date - two days"}
+{"time": "Sat Nov 11 17:16:01 2023", "text": "that's fine", "response": "Your order has been received. Thank you for choosing Beyotti.\nWould you like to do anything else?"}
+{"time": "Sat Nov 11 17:16:04 2023", "text": "no", "response": "Yeah"}
+{"time": "Sat Nov 11 17:17:33 2023", "text": "hey", "response": "Hello.\nWelcome to Beyotti Fashion Hub"}
+{"time": "Sat Nov 11 17:17:57 2023", "text": "i wanna order Kamala wears", "response": "Please specify the outfit type you would like to order"}
+{"time": "Sat Nov 11 17:18:17 2023", "text": "Kampala", "response": "Please specify the expected delivery date"}
+{"time": "Sat Nov 11 17:18:32 2023", "text": "i want it by 20/10/2024", "response": "Please confirm your order detail:\nOutfit - Kampala, Kampala\nDelivery Date - 20/10/2024"}
+{"time": "Sat Nov 11 17:19:16 2023", "text": "i wanna order a Bespoke and suit", "response": "Please specify the expected delivery date"}
+{"time": "Sat Nov 11 17:19:21 2023", "text": "tomorrow", "response": "Hello.\nWelcome to Beyotti Fashion Hub"}
+{"time": "Sat Nov 11 17:19:46 2023", "text": "i want the delivery tomorrow", "response": "Please specify your delivery date in the format 'DD-MM-YYYY'"}
+{"time": "Sat Nov 11 17:20:00 2023", "text": "i want the delivery the day after tomorrow", "response": "Please confirm your order detail:\nOutfit - Bespoke, Bespoke\nDelivery Date - the day after tomorrow"}
+{"time": "Sat Nov 11 17:20:09 2023", "text": "thank you", "response": "Bye!"}
+{"time": "Sat Nov 11 17:21:44 2023", "text": "i want new outfits", "response": "What kind of outfits would you like to order?\n\nThank you for choosing Beyotti"}
+{"time": "Sat Nov 11 17:21:51 2023", "text": "bye", "response": "Bye!"}
+{"time": "Sat Nov 11 17:23:15 2023", "text": "do you have a girlfriend?", "response": "I am a virtual assistant, I do not have the ability to live like human beings"}
+{"time": "Sat Nov 11 17:23:33 2023", "text": "what did you eat this morning?", "response": "Please refrain from asking unreasonable questions. Thank you!"}
+{"time": "Sat Nov 11 17:24:06 2023", "text": "i want a suit and kampala", "response": "Please specify the expected delivery date"}
+{"time": "Sat Nov 11 17:24:12 2023", "text": "23-12-2023", "response": "Hello.\nWelcome to Beyotti Fashion Hub"}
+{"time": "Sat Nov 11 17:24:22 2023", "text": "i want it by 23-12-2023", "response": "Please specify your delivery date in the format 'DD-MM-YYYY'"}
+{"time": "Sat Nov 11 17:24:34 2023", "text": "i want it on the 23-12-2023", "response": "Please specify your delivery date in the format 'DD-MM-YYYY'"}
+{"time": "Sat Nov 11 17:24:39 2023", "text": "i want it next month", "response": "Please confirm your order detail:\nOutfit - suit, suit\nDelivery Date - next month"}
+{"time": "Sat Nov 11 17:26:33 2023", "text": "i want a Suit and Kampala", "response": "Please specify the expected delivery date"}
+{"time": "Sat Nov 11 17:26:40 2023", "text": "i want it next year", "response": "Please confirm your order detail:\nOutfit - Suit, Suit\nDelivery Date - next year"}
+{"time": "Sat Nov 11 17:30:09 2023", "text": "yep", "response": "Your order has been received. Thank you for choosing Beyotti.\nWould you like to do anything else?"}
+{"time": "Sun Nov 12 00:35:34 2023", "text": "hi", "response": "Hello.\nWelcome to Beyotti Fashion Hub"}
+{"time": "Sun Nov 12 00:35:47 2023", "text": "who am i chatting with?", "response": "I am a virtual assistant, I do not have the ability to live like human beings"}
+{"time": "Sun Nov 12 00:35:54 2023", "text": "okay", "response": "That's right!"}
+{"time": "Sun Nov 12 00:36:02 2023", "text": "what are you?", "response": "I am a virtual assistant representing Beyotti"}
+{"time": "Sun Nov 12 00:36:59 2023", "text": "i wanna get some new clothes", "response": "What kind of outfits would you like to order?\nThank you for choosing Beyotti"}
+{"time": "Sun Nov 12 00:40:07 2023", "text": "hi", "response": "Hello.\nWelcome to Beyotti Fashion Hub"}
+{"time": "Sun Nov 12 00:40:14 2023", "text": "i wanna get some new outfits", "response": "What kind of outfits would you like to order?\nThank you for choosing Beyotti"}
+{"time": "Sun Nov 12 00:40:24 2023", "text": "i want proper Bespoke wears", "response": "Could not complete the action specify_outfit_order"}
+{"time": "Sun Nov 12 00:46:59 2023", "text": "i want to buy suit", "response": "Could not complete the action specify_outfit_order"}
+{"time": "Sun Nov 12 00:47:17 2023", "text": "tell me a joke", "response": "A little know fact is that ObamaCare pays for Morphine, Oxycontin and reconstructive surgery for those few survivors of a Chuck Norris beating."}
+{"time": "Sun Nov 12 00:48:14 2023", "text": "i wanna order a proper Bespoke wears", "response": "Could not complete the action specify_outfit_order"}
+{"time": "Sun Nov 12 00:53:46 2023", "text": "i wanna order a proper Bespoke wear", "response": "Could not complete the action specify_outfit_order"}
+{"time": "Sun Nov 12 00:55:27 2023", "text": "/usr/local/bin/python3 /Users/abdulbasitayinla/Downloads/ConvoAI/convoai_sdk/actions.py", "response": "I'm sorry, I do not understand."}
+{"time": "Sun Nov 12 13:23:25 2023", "text": "hey", "response": "Hello.\nWelcome to Beyotti Fashion Hub"}
+{"time": "Sun Nov 12 13:23:33 2023", "text": "how can you help me?", "response": "I am here to help you with your digital shopping processes on Beyotti"}
+{"time": "Sun Nov 12 13:23:37 2023", "text": "okay", "response": "That's right!"}
+{"time": "Sun Nov 12 13:23:47 2023", "text": "i wanna order Bespoke and Kampala", "response": "What kind of outfits would you like to order?\nThank you for choosing Beyotti"}
+{"time": "Sun Nov 12 13:24:20 2023", "text": "i wanna order Bespoke", "response": "Please specify the expected delivery date"}
+{"time": "Sun Nov 12 13:25:26 2023", "text": "next week", "response": "Could not complete the action specify_delivery_date"}
+{"time": "Sun Nov 12 13:26:37 2023", "text": "yes", "response": "Your order has been received. Thank you for choosing Beyotti.\nWould you like to do anything else?\nFalse"}
+{"time": "Sun Nov 12 16:38:12 2023", "text": "hi", "response": "Hello.\nWelcome to Beyotti Fashion Hub"}
+{"time": "Sun Nov 12 16:38:25 2023", "text": "i wanna get a Kampala", "response": "Please specify the expected delivery date"}
+{"time": "Sun Nov 12 16:38:29 2023", "text": "next week", "response": "Please provide your location address"}
+{"time": "Sun Nov 12 16:38:46 2023", "text": "my location is Agege", "response": "Could not complete the action location"}
+{"time": "Sun Nov 12 16:39:55 2023", "text": "tell me a joke", "response": "Chuck Norris' tongue has an egg beater effect on twats and is often confused with a rivet gun."}
+{"time": "Sun Nov 12 16:40:02 2023", "text": "/stop", "response": "Bye!"}
+{"time": "Sun Nov 12 16:41:35 2023", "text": "i would like to order new Bespoke outfit", "response": "What kind of outfits would you like to order?\nThank you for choosing Beyotti"}
+{"time": "Sun Nov 12 16:42:13 2023", "text": "Bespoke", "response": "Please specify the expected delivery date"}
+{"time": "Sun Nov 12 16:42:36 2023", "text": "23rd of october", "response": "Please specify your delivery date in the format 'DD-MM-YYYY'"}
+{"time": "Sun Nov 12 16:42:43 2023", "text": "23-12-2023", "response": "Hello.\nWelcome to Beyotti Fashion Hub"}
+{"time": "Sun Nov 12 16:43:10 2023", "text": "i want it on 23-12-2023", "response": "Please provide your location address"}
+{"time": "Sun Nov 12 16:43:16 2023", "text": "my location is Agege", "response": "Please provide a recognised location"}
+{"time": "Sun Nov 12 16:44:25 2023", "text": "my location is Lekki", "response": "Please provide a recognised location"}
+{"time": "Sun Nov 12 16:45:37 2023", "text": "tell me a joke", "response": "Chuck Norris put 5 of his good friends in the hospital, after they challenged him to a pillow fight."}
+{"time": "Sun Nov 12 16:46:08 2023", "text": "hello", "response": "Hello.\nWelcome to Beyotti Fashion Hub"}
+{"time": "Sun Nov 12 16:46:15 2023", "text": "i want to order Bespoke wear", "response": "Please specify the expected delivery date"}
+{"time": "Sun Nov 12 16:46:30 2023", "text": "i want it on 23-12-2023", "response": "Please provide your location address"}
+{"time": "Sun Nov 12 16:46:35 2023", "text": "my location is Agege", "response": "Please provide a recognised location"}
+{"time": "Sun Nov 12 16:48:56 2023", "text": "/usr/local/bin/python3 /Users/abdulbasitayinla/Downloads/ConvoAI/convoai_sdk/entity_extractor.py", "response": "I'm sorry, I do not understand."}
+{"time": "Sun Nov 12 17:41:13 2023", "text": "hello", "response": "Hello.\nWelcome to Beyotti Fashion Hub"}
+{"time": "Sun Nov 12 17:41:22 2023", "text": "i wanna order Bespoke wears", "response": "Please specify the expected delivery date"}
+{"time": "Sun Nov 12 17:41:27 2023", "text": "i want it tomorrrow", "response": "Please specify your delivery date in the format 'DD-MM-YYYY'"}
+{"time": "Sun Nov 12 17:41:38 2023", "text": "i want it delivered tomorrow", "response": "Please provide a recognised location"}
+{"time": "Sun Nov 12 17:41:56 2023", "text": "my location is agege", "response": "Could not complete the action location"}
+{"time": "Sun Nov 12 17:43:28 2023", "text": "my location is ikeja", "response": "Please provide a recognised location"}
+{"time": "Sun Nov 12 17:43:42 2023", "text": "my location is Dopemu", "response": "Could not complete the action location"}
