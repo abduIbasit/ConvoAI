@@ -1,20 +1,20 @@
 import os
 
 #************************************** ************************************** ************************************** ************************************** 
-script_directory = os.path.dirname(os.path.realpath(__file__))
-conversation_directory = os.path.join(os.path.dirname(script_directory), "conversation", "conversation.json")
-prompts_directory = os.path.join(os.path.dirname(script_directory), "conversation", "prompts.txt")
+ACTIONS_DIRECTORY = os.path.dirname(os.path.realpath(__file__))
+CONVERSATION_DIRECTORY = os.path.join(os.path.dirname(ACTIONS_DIRECTORY), "core", "_conversation", "conversation.json")
+PROMPTS_DIRECTORY = os.path.join(os.path.dirname(ACTIONS_DIRECTORY), "core", "_conversation", "prompts.txt")
 #************************************** ************************************** ************************************** ************************************** 
 
 import yaml
-from typing import Text, List, Dict, Tuple, Any, Generator
+from typing import Text, Any, Generator
 from .entity_extractor import EntityExtractor
 # from entity_extractor import EntityExtractor
 
 
 def load_prompts():
         try:
-            with open(prompts_directory, "r") as file:
+            with open(PROMPTS_DIRECTORY, "r") as file:
                 lines = file.readlines()
                 if lines:
                     last_entry = (lines[-1])
@@ -138,10 +138,13 @@ class Tracker:
             if slots_configurations[slot_name]['mappings'][0]['type'] == 'from_entity':
                 entity_label = slots_configurations[slot_name]["mappings"][0]["entity"]
                 entities = next(Tracker.get_entities(entity_label), None)
-                # Use the extracted entity value as the slot value
-                slots[slot_name]["value"] = entities
-                slots[slot_name]["type"] = slots_configurations[slot_name]["type"]
-                return entities
+                if entities is None:
+                    return slots[slot_name]["value"]
+                else:
+                    # Use the extracted entity value as the slot value
+                    slots[slot_name]["value"] = entities
+                    slots[slot_name]["type"] = slots_configurations[slot_name]["type"]
+                    return entities
             
             # If the slot type is text or any, return the value as is
             elif slot_type in ["text", "any"]:
@@ -167,3 +170,5 @@ class Tracker:
             
         except Exception as e:
             raise ValueError(f"Error retrieving slot value: {e}")
+        
+# print(next(Tracker.get_entities("outfit_type"), None))
