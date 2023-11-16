@@ -1,1 +1,5 @@
-/core.py
+# Untracked files & folders
+__pycache__/
+convoai/
+ConvoAI.egg-info/
+dist/
