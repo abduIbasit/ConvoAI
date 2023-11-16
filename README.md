@@ -1,6 +1,6 @@
 # ConvoAI - Conversational Chatbot Framework
 
-![ConvoAI Logo](.convoai.jpeg)
+![ConvoAI](convoai.jpeg)
 
 ConvoAI is an open-source conversational chatbot framework designed to simplify and streamline the development of powerful conversational AI chatbots. Built on the robust sentence transformer model 'paraphrase-distilroberta-base-v1,' ConvoAI excels in understanding semantic similarity and efficiently mapping user inputs to intents with minimal data.
 
